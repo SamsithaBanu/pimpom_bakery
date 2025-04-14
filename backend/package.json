@@ -23,6 +23,7 @@
     "mongoose": "^8.3.4",
     "nodemon": "^3.1.0",
     "path": "^0.12.7",
+    "pimpom_bakery": "file:..",
     "stripe": "^17.0.0"
   }
 }
