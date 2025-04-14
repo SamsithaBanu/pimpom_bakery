@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { HomepageStyled } from "./HomepageStyled";
 import SummaryApi from "../../common";
 import { Link } from "react-router-dom";
+import { CategoryStyled } from "./CategoryStyled";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -22,7 +23,7 @@ const Categories = () => {
   }, []);
 
   return (
-    <HomepageStyled>
+    <CategoryStyled>
       <div className="categoryWrapper">
         {loading
           ? categoryLoading.map((el, index) => {
@@ -48,7 +49,7 @@ const Categories = () => {
               );
             })}
       </div>
-    </HomepageStyled>
+    </CategoryStyled>
   );
 };
 
