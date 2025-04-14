@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { HomepageStyled } from "./HomepageStyled";
 import SummaryApi from "../../common";
 import { Link } from "react-router-dom";
-import { CategoryStyled } from "./CategoryStyled";
 
 const Categories = () => {
   const [categories, setCategories] = useState([]);
@@ -23,33 +21,70 @@ const Categories = () => {
   }, []);
 
   return (
-    <CategoryStyled>
-      <div className="categoryWrapper">
+    <>
+      <div
+        className="categoryWrapper"
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "30px",
+          padding: "0 10%",
+          position: "absolute",
+          bottom: "0",
+          width: " 100%",
+          top: "550px"
+        }}
+      >
         {loading
           ? categoryLoading.map((el, index) => {
-              return (
-                <div
-                  className="h-16 w-16 md:w-20 md:h-20 rounded-full overflow-hidden bg-slate-200 animate-pulse"
-                  key={"categoryLoading" + index}
-                ></div>
-              );
+              return <div key={"categoryLoading" + index}></div>;
             })
           : categories?.map((category, id) => {
               return (
                 <Link
                   to={"/product-category?category=" + category?.category}
                   className="categoryItem"
+                  style={{
+                    width: "140px",
+                    height: "120px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    backgroundColor: "white",
+                    borderRadius: "4px",
+                    padding: "8px 0px"
+                  }}
                   key={category?.category}
                 >
                   <div className="categoryImage">
-                    <img src={category?.productImage?.[0]} alt="category" />
+                    <img
+                      src={category?.productImage?.[0]}
+                      alt="category"
+                      style={{
+                        width: "80px",
+                        height: "80px",
+                        borderRadius: " 50%"
+                      }}
+                    />
                   </div>
-                  <div className="categoryName">{category?.category}</div>
+                  <div
+                    className="categoryName"
+                    style={{
+                      fontSize: "15px",
+                      fontWeight: "600",
+                      marginTop: "8px"
+                    }}
+                  >
+                    {category?.category}
+                  </div>
                 </Link>
               );
             })}
       </div>
-    </CategoryStyled>
+    </>
   );
 };
 

@@ -37,41 +37,7 @@ export const CategoryStyled = styled.div`
     font-weight: 600;
     margin-top: 8px;
   }
-  // .categoryWrapper {
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: center;
-  //   align-items: center;
-  //   gap: 30px;
-  //   padding: 0 10%;
-  //   position: absolute;
-  //   // top: 550px;
 
-  //   .categoryItem {
-  //     width: 140px;
-  //     height: 120px;
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: center;
-  //     background: white;
-  //     border-radius: 4px;
-  //     padding: 8px 0px;
-
-  //     .categoryImage {
-  //       img {
-  //         width: 80px;
-  //         height: 80px;
-  //         border-radius: 50%;
-  //       }
-  //     }
-  //     .categoryName {
-  //       font-size: 15px;
-  //       font-weight: 600;
-  //       margin-top: 8px;
-  //     }
-  //   }
-  // }
   .categoryListWrapper {
     display: flex;
     flex-direction: row;

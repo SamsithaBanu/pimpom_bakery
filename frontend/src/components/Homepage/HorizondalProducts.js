@@ -3,7 +3,6 @@ import fetchCategoryWiseProduct from "../../helpers/fetchCategoryWiseProducts";
 import displayINRCurrency from "../../helpers/displayCurrency";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { HorizondalProductsStyled } from "./HorizondalProductsStyled";
 import { Link } from "react-router-dom";
 import SummaryApi from "../../common";
 import addToCart from "../../helpers/addToCart";
@@ -71,23 +70,76 @@ const HorizondalProducts = ({ category, headings }) => {
   };
 
   return (
-    <HorizondalProductsStyled>
-      <div className="containermax" id="category">
-        <div className="header-wrapper">
-          <div className="heading-main">
+    <>
+      <div
+        className="containermax"
+        id="category"
+        style={{
+          width: "100%",
+          padding: "20px 12%",
+          backgroundColor: "white",
+          marginTop: "70px"
+        }}
+      >
+        <div
+          className="header-wrapper"
+          style={{
+            paddingTop: "20px",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between"
+          }}
+        >
+          <div
+            className="heading-main"
+            style={{
+              display: "flex",
+              paddingLeft: "300px",
+              flexDirection: "column",
+              alignItems: "center",
+              justifycontent: "center"
+            }}
+          >
             {/* <i> */}
-            <div className="header">{headings}</div>
+            <div
+              className="header"
+              style={{
+                fontSize: "24px",
+                fontWeight: "500",
+                textAlign: "center"
+              }}
+            >
+              {headings}
+            </div>
             {/* </i> */}
-            <div className="subheading">
+            <div
+              className="subheading"
+              style={{ fontsize: "14px", fontWeight: "400", color: "grey" }}
+            >
               Layers of Love, One Pastry at a Time,Experience the Magic of Flaky
               Goodness.
             </div>
           </div>
-          <Link className="seeAll" to={"/product-listing"}>
+          <Link
+            className="seeAll"
+            style={{
+              fontSize: "18px",
+              color: "#9f2b68",
+              margin: "30px 50px 0px 30px"
+            }}
+            to={"/product-listing"}
+          >
             See all
           </Link>
         </div>
-        <div className="container">
+        <div
+          className="container"
+          style={{
+            margin: "20px auto",
+            padding: "0 20px",
+            position: "relative"
+          }}
+        >
           {/* <div className="arrowWrapper">
             <button onClick={scrollLeft} className="arrowBTN arrowLeft">
               <FaAngleLeft />
@@ -96,53 +148,30 @@ const HorizondalProducts = ({ category, headings }) => {
               <FaAngleRight />
             </button>
           </div> */}
-          <div className="cardContainer" ref={scrollElement}>
+          <div
+            className="cardContainer"
+            ref={scrollElement}
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "30px",
+              justifyContent: "flex-start",
+              alignItems: "center"
+            }}
+          >
             {isLoading ? (
               <p>Loading...</p>
             ) : (
-              allProduct?.slice(0, 10)?.map((item, index) => (
-                <ListingCard item={item} key={index + "allProduct"} />
-                // <Link
-                //   to={"/product/" + item?._id}
-                //   key={index}
-                //   className="cardWrapper"
-                //  >
-                //   <div className="cardImage">
-                //     <img src={item?.productImage[0]} alt="product Image" />
-                //   </div>
-                //   <div className="cardDetails">
-                //     <div className="name">
-                //       {item.productName.substring(0, 20)}
-                //       {getSpliing(item?.productName)}
-                //     </div>
-                //     {/* <div className="category">{item?.category}</div> */}
-                //     <div className="priceWrapper">
-                //       <div className="price">
-                //         {displayINRCurrency(item?.sellingPrice)}
-                //       </div>
-                //       <div className="wholePrice">
-                //         {displayINRCurrency(item?.price)}
-                //       </div>
-                //     </div>
-                //     <div className="addTocartCTA addToCart">
-                //       <button
-                //         className=""
-                //         onClick={(e)=>handleAddToCart(e,item?._id)}
-                //       >
-                //         Add to cart
-                //       </button>
-                //       <MdOutlineShoppingCart
-                //         style={{ width: "20px", height: "20px" }}
-                //       />
-                //     </div>
-                //   </div>
-                // </Link>
-              ))
+              allProduct
+                ?.slice(0, 10)
+                ?.map((item, index) => (
+                  <ListingCard item={item} key={index + "allProduct"} />
+                ))
             )}
           </div>
         </div>
       </div>
-    </HorizondalProductsStyled>
+    </>
   );
 };
 

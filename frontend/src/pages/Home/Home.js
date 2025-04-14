@@ -24,7 +24,7 @@ import TestimonialCarousel from "../../components/Homepage/TestimonialCarousel/T
 
 const Home = () => {
   return (
-    <HomeCommonStyled>
+    <>
       <Link className="homeCommon" to={"/product-listing"}>
         <img
           src={frontlevelpage}
@@ -103,7 +103,7 @@ const Home = () => {
       <Desserts/>
       <HorizondalProducts category={'Puffs'} headings='Fluffy Puffs'/>
       <VerticalProducts category={'Pancakes'} headings={'Perfect Pancakes'}/> */}
-    </HomeCommonStyled>
+    </>
   );
 };
 
