@@ -1,4 +1,4 @@
-import productModel from '../models/productModel';
+const productModel = require("../models/productModel");
 
 async function productDetailsController(req, res) {
   try {

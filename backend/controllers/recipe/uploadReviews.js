@@ -1,5 +1,5 @@
-import recipeModel from "../../models/recipeModel";
-import userModel from "../../models/userModel";
+const recipeModel = require("../../models/recipeModel");
+const userModel = require("../../models/userModel");
 
 const uploadReviews = async (req, res) => {
     try {

@@ -1,4 +1,4 @@
-import wishlistModel from "../../models/wishlist";
+const wishlistModel = require("../../models/wishlist");
 
 const deleteWishlistController = async(req,res)=>{
     try{

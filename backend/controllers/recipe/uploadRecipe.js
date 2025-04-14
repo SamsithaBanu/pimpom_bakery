@@ -1,5 +1,5 @@
-import uploadProductPermission from "../../helpers/permission";
-import recipeModel from "../../models/recipeModel";
+const uploadProductPermission = require("../../helpers/permission");
+const recipeModel = require("../../models/recipeModel");
 
 async function uploadRecipeController(req, res){
     try{

@@ -1,7 +1,6 @@
-import dotenv from 'dotenv';
-dotenv.config();
+require('dotenv').config();
 
-const stripe = require("stripe")(NODE_ENV.STRIPE_KEY);
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 const webhooks = (req, res) => {
   const endpointSecret =

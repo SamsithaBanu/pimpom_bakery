@@ -1,8 +1,7 @@
-import dotenv from 'dotenv';
-dotenv.config();
+require('dotenv').config();
 
-const stripe = require("stripe")(NODE_ENV.STRIPE_KEY);
-import OrderModel from '../../models/orderModel';
+const stripe = require("stripe")(process.env.STRIPE_KEY);
+const OrderModel = require("../../models/orderModel");
 
 const checkoutSession = async (req, res) => {
   const { session_id, payment } = req.query;

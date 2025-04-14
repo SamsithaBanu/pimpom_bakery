@@ -1,5 +1,4 @@
-import productModel from "../models/productModel";
-
+const productModel = require("../models/productModel");
 const allCategory = async (req, res) => {
   try {
     const CategoryProducts = await productModel.distinct("category");

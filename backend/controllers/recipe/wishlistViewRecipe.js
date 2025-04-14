@@ -1,4 +1,4 @@
-import wishlistModel from "../../models/wishlist";
+const wishlistModel = require("../../models/wishlist");
 
 const wishlistViewRecipe = async(req,res)=>{
     try{

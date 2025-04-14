@@ -1,4 +1,4 @@
-import recipeModel from "../../models/recipeModel";
+const recipeModel = require("../../models/recipeModel");
 
 const CategoryWishRecipe = async (req, res) => {
   try {

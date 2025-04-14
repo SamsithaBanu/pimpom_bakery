@@ -6,7 +6,7 @@ const Order = () => {
   const user = useSelector((state) => state?.user?.user);
   console.log("user", user);
   const base_url =
-  import.meta.env.MODE === "development" ? "http://localhost:8080" : "";
+  process.env.REACT_APP_ENV_MODE === "development" ? "http://localhost:8080" : "";
 
   useEffect(() => {
     const fetchOrders = async () => {

@@ -1,5 +1,5 @@
-import OrderModel from "../../models/orderModel";
-import userModel from "../../models/userModel";
+const OrderModel = require("../../models/orderModel");
+const userModel = require("../../models/userModel");
 
 
 const allOrdersController = async (req, res) => {

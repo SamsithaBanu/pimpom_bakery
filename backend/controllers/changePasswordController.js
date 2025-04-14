@@ -1,5 +1,5 @@
-import userModel from "../models/userModel";
-import bcrypt from "bcryptjs";
+const userModel = require("../models/userModel");
+const bcrypt = require("bcryptjs");
 
 async function changePasswordController(req, res) {
   try {

@@ -1,5 +1,7 @@
-const backendDomain =
-  import.meta.env.MODE === "development" ? "http://localhost:8080" : "";
+const backendDomain = process.env.REACT_APP_ENV_MODE === "development" ? "http://localhost:8080" : "";
+console.log('procew', process.env.REACT_APP_CLOUD_NAME_CLOUDINARY)
+
+console.log('backenddo', backendDomain);
 
 const SummaryApi = {
   singUp: {

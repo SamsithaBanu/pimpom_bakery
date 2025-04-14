@@ -24,7 +24,6 @@ app.use("/api",router);
 
 
 const PORT = 8080;
-const __dirname = path.resolve();
 
 if(process.env.NODE_ENV==='production'){
     app.use(express.static(path.join(__dirname, '../frontend/build')));

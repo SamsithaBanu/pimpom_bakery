@@ -1,11 +1,9 @@
-import dotenv from 'dotenv';
-dotenv.config();
+require('dotenv').config();
 
-import addToCartModel from '../../models/cartProduct';
-import OrderModel from '../../models/orderModel';
-import userModel from '../../models/userModel';
-
-const stripe = require("stripe")(NODE_ENV.STRIPE_KEY);
+const addToCartModel = require("../../models/cartProduct");
+const OrderModel = require("../../models/orderModel");
+const userModel = require("../../models/userModel");
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 const paymentController = async (req, res) => {
   const { cartItems } = req.body; // Pass the priceId and shippingAddress from the frontend

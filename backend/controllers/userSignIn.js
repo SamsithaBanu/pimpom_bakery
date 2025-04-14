@@ -1,6 +1,6 @@
-import bcrypt from 'bcryptjs';
-import jwt from 'jsonwebtoken';
-import userModel from "../models/userModel";
+const userModel = require("../models/userModel");
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 async function userSignInController(req, res){
     try{

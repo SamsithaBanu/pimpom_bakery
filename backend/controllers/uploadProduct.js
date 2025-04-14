@@ -1,5 +1,5 @@
-import uploadProductPermission from "../helpers/permission";
-import productModel from "../models/productModel";
+const uploadProductPermission = require("../helpers/permission")
+const productModels = require("../models/productModel");
 
 async function uploadProductController(req, res){
     try{

@@ -1,4 +1,4 @@
-import userModel from "../models/userModel";
+const userModel = require("../models/userModel");
 
 async function allUsers(req,res){
     try{

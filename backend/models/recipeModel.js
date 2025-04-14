@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose')
 
 const ingredientSchema = mongoose.Schema({
   name: String,

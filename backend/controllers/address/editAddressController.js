@@ -1,4 +1,4 @@
-import userModel from "../../models/userModel";
+const userModel = require("../../models/userModel");
 
 const editAddressController = async (req, res) => {
   const { userId, addressId } = req.params;

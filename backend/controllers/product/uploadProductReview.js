@@ -1,5 +1,5 @@
-import productModel from "../../models/productModel";
-import userModel from "../../models/userModel";
+const productModel = require("../../models/productModel");
+const userModel = require("../../models/userModel");
 
 const uploadProductReview = async (req, res) => {
   try {

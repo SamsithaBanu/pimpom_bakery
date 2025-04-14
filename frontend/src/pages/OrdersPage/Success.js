@@ -13,7 +13,7 @@ const Success = () => {
   const sessionId = query.get("session_id");
   const paymentType = query.get("payment");
   const base_url =
-    import.meta.env.MODE === "development" ? "http://localhost:8080" : "";
+  process.env.REACT_APP_ENV_MODE === "development" ? "http://localhost:8080" : "";
 
   console.log("payment", paymentType);
 

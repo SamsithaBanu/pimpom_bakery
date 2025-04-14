@@ -1,5 +1,6 @@
 const Stripe = require("stripe");
+require('dotenv').config();
 
-const stripe = Stripe(NODE_ENV.STRIPE_KEY);
+const stripe = Stripe(process.env.STRIPE_KEY);
 
 module.exports = stripe;

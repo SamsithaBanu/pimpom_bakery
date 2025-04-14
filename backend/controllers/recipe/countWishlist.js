@@ -1,4 +1,4 @@
-import wishlistModel from "../../models/wishlist";
+const wishlistModel = require("../../models/wishlist");
 
 const countWishlist = async(req,res)=>{
     try{

@@ -1,4 +1,4 @@
-import productModel from "../models/productModel";
+const productModel = require("../models/productModel");
 
 const CategoryWiseProducts = async (req, res) => {
   try {
