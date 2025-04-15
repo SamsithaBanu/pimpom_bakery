@@ -155,7 +155,7 @@ const HorizondalProducts = ({ category, headings }) => {
               display: "flex",
               flexWrap: "wrap",
               gap: "30px",
-              justifyContent: "flex-start",
+              justifyContent: "center",
               alignItems: "center"
             }}
           >

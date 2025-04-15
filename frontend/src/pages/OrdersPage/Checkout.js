@@ -199,22 +199,44 @@ const Checkout = () => {
         <div className="leftWrapper">
           <div className="total">Delivery Address</div>
           <div className="addresswrap">
-            <div className="left">
-              <div className="name">{user?.name}</div>
-              <div className="addrss">
-                {addressArray?.doorNo}, {addressArray?.landmark},{" "}
-                {addressArray?.address}
-              </div>
-            </div>
-            <div className="right">
+            {addressArray?.length > 0 ? (
+              <>
+                <div className="left">
+                  <div className="name">{user?.name}</div>
+                  <div className="addrss">
+                    {addressArray?.doorNo}, {addressArray?.landmark},{" "}
+                    {addressArray?.address}
+                  </div>
+                </div>
+                <div className="right">
+                  <Link
+                    to={`/general-user/edit-address/${user?._id}`}
+                    state={{ address: addressArray, fromCheckout: true }} // Pass state as a separate prop
+                    className="edit"
+                  >
+                    <MdModeEdit size={22} />
+                  </Link>
+                </div>
+              </>
+            ) : (
               <Link
+                style={{
+                  background: "#9f2b68",
+                  color: "white",
+                  marginBottom: "10px",
+                  borderRadius: "8px",
+                  marginTop: "20px",
+                  padding: "10px 10px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginLeft: "230px"
+                }}
                 to={`/general-user/edit-address/${user?._id}`}
-                state={{ address: addressArray, fromCheckout: true }} // Pass state as a separate prop
-                className="edit"
               >
-                <MdModeEdit size={22} />
+                Add Address
               </Link>
-            </div>
+            )}
           </div>
           <div className="totalItemsWrapper">
             <div className="total">

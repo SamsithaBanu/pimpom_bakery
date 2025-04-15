@@ -19,11 +19,14 @@ const Slogans = ({ isFromRecipe = false }) => {
             padding: "0px 12%"
           }}
         >
-          <div className="headerWrapper">
-            <i>
+          <div>
+            <i style={{ color: "#D95F59", marginBottom: "-10px",fontSize: '20px',
+                  fontWeight: '500',
+                  textAlign: 'center' }}>
               <div
-                className="header"
-                style={{ color: "#D95F59", marginBottom: "-10px" }}
+                style={{ color: "#D95F59", marginBottom: "-10px",fontSize: '20px',
+                  fontWeight: '500',
+                  textAlign: 'center' }}
               >
                 Our Awesome Services
               </div>
@@ -206,16 +209,26 @@ const Slogans = ({ isFromRecipe = false }) => {
           </div>
         </div>
       ) : (
-        <div className="sloganContainer">
+        <div className="sloganContainer" style={{
+          margin: "30px 0px 40px 0px",
+          padding: "0px 12%"
+        }}>
           <div className="headerWrapper">
             <i>
-              <div className="header">
+              <div className="header" style={{ color: "rgb(159, 43, 104)", marginBottom: "-10px",fontSize: '20px',
+                  fontWeight: '500',
+                  textAlign: 'center' }}>
                 Layers of Love, Crafted to Perfection, One Bite at a Time
               </div>
             </i>
             <div className="subheader"></div>
           </div>
-          <div className="mainWrapper">
+          <div className="mainWrapper" style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "60px",
+              marginTop: "40px"
+            }}>
             <div
               className="sloganItem"
               style={{
